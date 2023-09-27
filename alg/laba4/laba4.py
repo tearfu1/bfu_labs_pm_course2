@@ -3,12 +3,18 @@ n = [x for x in range(1,21)]
 random.shuffle(n)
 print(n)
 
-for i in range(len(n)-1,0,-1):
-    for j in range(len(n)):
-        if (i + j < len(n)):
-            if(n[i+j] < n[j]):
-                n[i+j], n[j] = n[j], n[i+j]
-        else:
-            break
+size = len(n)
+step = size
+flag = False
 
+while flag or step>1:
+    if step>1:
+        step = int(step/1.247)
+    
+    flag, i = False, 0
+    while i+step<size:
+        if n[i] > n[i+step]:
+            n[i], n[i+step] = n[i+step],n[i]
+            flag = True
+        i+=step
 print(n)
