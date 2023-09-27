@@ -1,2 +1,2 @@
 # alg labs
-labs sem1: 1 ✅ 2 ✅ 3 ✅ 4 ❓ 5❓ 6❓ <br>
+labs sem1: 1 ✅ 2 ✅ 3 ✅ 4 ✅ 5✅ 6✅ <br>
