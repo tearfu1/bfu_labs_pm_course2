@@ -10,7 +10,7 @@ with open("example.txt") as file:
     text = file.read()
 
 words = text.split()
-table = [0]*31
+table = [0]*(len(words)*2)
 
 for i in words:
     temp_sum = 0
