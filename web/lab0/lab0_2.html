@@ -1,0 +1,30 @@
+<!--6 var-->
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<title>lab0_2</title>
+		<meta charset="UTF-8">
+		<meta name="author" content="Maxim Vayda">
+		<meta name="form" content="Choose a color">
+		<noscript>JavaScript is not supported</noscript>
+	</head>
+	<body>
+		<form>
+		<label for="color">Choose a color</label>
+		<select>
+			<option disabled selected value> -- colors -- </option>
+			<option value="Red">Red</option>
+			<option value="Green">Green</option>
+			<option value="Blue">Blue</option>
+			<option value="Pink">Pink</option>
+		</select>
+		<style>
+			option:disabled{color:black}
+			option {color:white}
+			option[value="Red"]{background-color:red}
+			option[value="Green"]{background-color:green}
+			option[value="Blue"]{background-color:blue}
+			option[value="Pink"]{background-color:pink}
+		</style>
+	</body>
+</html>
