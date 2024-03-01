@@ -1,7 +1,7 @@
 <?php
 //task 1
 echo "task 1";
-
+//здесь я не стал менять snake case, так как у нас очень_плохое_грязное_имя именно так и должно выглядеть
 $very_bad_unclear_name = "15 chicken wings";
 $order = &$very_bad_unclear_name;
 $order .= " and cola";
@@ -22,8 +22,19 @@ echo "\n";
 echo 15 - 3;
 echo "\n";
 
-$last_month = 1187.23;
-$this_month = 1089.98;
-echo $last_month - $this_month;
+$lastMonth = 1187.23;
+$thisMonth = 1089.98;
+echo $lastMonth - $thisMonth;
 echo "\n";
 
+//task 11
+echo "task 11\n";
+
+$numLanguages = 4;
+$months = 11;
+
+$days = 16 * $months;
+
+$daysPerLanguages = $days / $numLanguages;
+echo "Mag spent about $daysPerLanguages days to learn each programming language";
+echo "\n";
