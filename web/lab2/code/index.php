@@ -9,7 +9,7 @@ echo "\nYour order is: $very_bad_unclear_name.";
 echo "\n";
 
 //task 2
-echo "task 2\n";
+echo "\ntask 2\n";
 
 $newInt = 52;
 echo $newInt;
@@ -28,7 +28,7 @@ echo $lastMonth - $thisMonth;
 echo "\n";
 
 //task 11
-echo "task 11\n";
+echo "\ntask 11\n";
 
 $numLanguages = 4;
 $months = 11;
@@ -40,13 +40,13 @@ echo "Mag spent about $daysPerLanguages days to learn each programming language"
 echo "\n";
 
 //task 12
-echo "task 12\n";
+echo "\ntask 12\n";
 $squared = 8 ** 2;
 echo "squared 8 is $squared";
 echo "\n";
 
 //task 13
-echo "task 13\n";
+echo "\ntask 13\n";
 $myNum = 49;
 $answer = $myNum;
 $answer += 2;
@@ -58,7 +58,7 @@ echo "finally answer is $answer";
 echo "\n";
 
 //task 14
-echo "task 14\n";
+echo "\ntask 14\n";
 $a = 10;
 $b = 3;
 $c = $a % $b;
@@ -184,7 +184,7 @@ echo "we should summarize first $cnt elements to receive sum greater than 10";
 echo "\n";
 
 //task 15
-echo "task 15\n";
+echo "\ntask 15\n";
 function printStringReturnNumber(): int
 {
     $num = rand(1, 100);
@@ -197,3 +197,60 @@ $myNum = printStringReturnNumber();
 
 echo "myNum is $myNum";
 echo "\n";
+
+//task 16
+echo "\ntask 16\n";
+function increaseEnthusiasm(string $str)
+{
+    return $str . "!";
+}
+
+echo increaseEnthusiasm("im fine") . "\n";
+
+function repeatThreeTimes(string $str)
+{
+    return $str . $str . $str;
+}
+
+echo repeatThreeTimes("is it echo?") . "\n";
+
+echo increaseEnthusiasm(repeatThreeTimes("its absolutely echo")) . "\n";
+
+function cut(string $str, int $num = 10): string
+{
+    return substr($str, 0, $num);
+}
+
+$newStr = "hello im here to talk about something";
+echo "cut function: " . cut($newStr, 20) . "\n";
+
+function arrayOutput(array $arr)
+{
+    if (sizeof($arr) == 0) {
+        echo "\n";
+        return 0;
+    }
+    echo $arr[0] . " ";
+    array_splice($arr, 0, 1);
+    return arrayOutput($arr);
+}
+
+echo "recursive output: ";
+arrayOutput([1, 2, 3]);
+
+$newNum = rand(100, 1000);
+
+function numSumDecreaser(int $num)
+{
+    $sum = 0;
+    while ($num > 0) {
+        $sum += $num % 10;
+        $num = floor($num / 10);
+    }
+    if ($sum > 9) {
+        return numSumDecreaser($sum);
+    }
+    return $sum;
+}
+
+echo "New num is $newNum, if we put it in our function: " . numSumDecreaser($newNum);
