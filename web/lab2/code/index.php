@@ -56,3 +56,18 @@ $answer /= 2;
 $answer -= $myNum;
 echo "finally answer is $answer";
 echo "\n";
+
+//task 14
+echo "task 14\n";
+$a = 10;
+$b = 3;
+$c = $a % $b;
+echo "a % b is $c";
+echo "\n";
+
+if ($c == 0) {
+    echo "a is divisible by b without remainder\n";
+} else {
+    echo "a is divisible by b with remainder: $c\n";
+}
+
