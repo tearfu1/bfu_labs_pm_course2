@@ -38,3 +38,10 @@ $days = 16 * $months;
 $daysPerLanguages = $days / $numLanguages;
 echo "Mag spent about $daysPerLanguages days to learn each programming language";
 echo "\n";
+
+//task 12
+
+echo "task 12\n";
+$squared = 8**2;
+echo "squared 8 is $squared";
+echo "\n";
