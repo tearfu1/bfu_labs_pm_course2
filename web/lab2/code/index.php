@@ -254,3 +254,92 @@ function numSumDecreaser(int $num)
 }
 
 echo "New num is $newNum, if we put it in our function: " . numSumDecreaser($newNum);
+echo "\n";
+
+//task 17
+echo "\ntask 17\n";
+
+$array9 = [];
+
+for ($i = 1; $i < 10; ++$i) {
+    $tempStr = "";
+    for ($j = 0; $j < $i; ++$j) {
+        $tempStr .= "x";
+    }
+    array_push($array9, $tempStr);
+}
+echo "'x' array: ";
+foreach ($array9 as $item) {
+    echo "$item ";
+}
+echo "\n";
+
+function arrayFill(string $elem, int $num): array
+{
+    $newArray = [];
+    while (sizeof($newArray) < $num) {
+        array_push($newArray, $elem);
+    }
+    return $newArray;
+}
+
+echo "arrayFill func result: ";
+$array10 = arrayFill('x', 5);
+foreach ($array10 as $item) {
+    echo "$item ";
+}
+echo "\n";
+
+$array11 = [[1, 2, 3], [4, 5], [6]];
+echo "2-D array is ";
+foreach ($array11 as $item) {
+    foreach ($item as $value) {
+        echo "$value ";
+    }
+}
+echo "\n";
+$newSum = 0;
+foreach ($array11 as $item1) {
+    foreach ($item1 as $item2) {
+        $newSum += $item2;
+    }
+}
+echo "Sum of 2-dimensional array is : " . $newSum . "\n";
+
+echo "2-D array creation: ";
+$array12 = [];
+$firstDim = 3;
+$secondDim = 3;
+$cnt = 1;
+for ($i = 0; $i < $firstDim; ++$i) {
+    $tempArray = [];
+    array_push($array12, $tempArray);
+    for ($j = 0; $j < $secondDim; ++$j) {
+        array_push($array12[$i], $cnt);
+        $cnt++;
+    }
+}
+foreach ($array12 as $item) {
+    foreach ($item as $value) {
+        echo "$value ";
+    }
+}
+echo "\n";
+
+$array13 = [2, 5, 3, 9];
+$result = $array13[0] * $array13[1] + $array13[2] * $array13[3];
+echo "result is $result" . "\n";
+
+$user = ['name' => "Maxim", 'surname' => "Vayda", 'patronymic' => "Valentinovich"];
+echo "surname is: " . $user['surname'] . ", name is: " . $user['name'] . ", patronymic is: " . $user['patronymic'] . "\n";
+
+$date = ['year' => "2024", 'month' => "march", 'day' => "1"];
+echo $date['year'] . "-" . $date['month'] . "-" . $date['day'] . "\n";
+
+$arr = ['a', 'b', 'c', 'd', 'e'];
+$size = sizeof($arr);
+echo "size of arr: $size" . "\n";
+$lastElemIndex = $size - 1;
+$predLastElemIndex = $size - 2;
+echo "last elem: $arr[$lastElemIndex]" . "\n";
+echo "pred last elem: $arr[$predLastElemIndex]" . "\n";
