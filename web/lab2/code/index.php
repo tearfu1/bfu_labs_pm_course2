@@ -40,8 +40,19 @@ echo "Mag spent about $daysPerLanguages days to learn each programming language"
 echo "\n";
 
 //task 12
-
 echo "task 12\n";
-$squared = 8**2;
+$squared = 8 ** 2;
 echo "squared 8 is $squared";
+echo "\n";
+
+//task 13
+echo "task 13\n";
+$myNum = 49;
+$answer = $myNum;
+$answer += 2;
+$answer *= 2;
+$answer -= 2;
+$answer /= 2;
+$answer -= $myNum;
+echo "finally answer is $answer";
 echo "\n";
