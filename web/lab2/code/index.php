@@ -182,3 +182,18 @@ foreach ($array8 as $item) {
 }
 echo "we should summarize first $cnt elements to receive sum greater than 10";
 echo "\n";
+
+//task 15
+echo "task 15\n";
+function printStringReturnNumber(): int
+{
+    $num = rand(1, 100);
+    echo "i'm random string from printStringReturnNumber function, also i return random number(1-100), not it's: $num";
+    echo "\n";
+    return $num;
+}
+
+$myNum = printStringReturnNumber();
+
+echo "myNum is $myNum";
+echo "\n";
