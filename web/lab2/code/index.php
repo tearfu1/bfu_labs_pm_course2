@@ -71,3 +71,114 @@ if ($c == 0) {
     echo "a is divisible by b with remainder: $c\n";
 }
 
+$st = pow(2, 10);
+echo "2 to the 10th power is $st";
+echo "\n";
+
+$root1 = sqrt(245);
+echo "square root of 245 is $root1";
+echo "\n";
+
+$array1 = [4, 2, 5, 19, 13, 0, 10];
+$sum = 0;
+foreach ($array1 as $item) {
+    $sum += $item ** 2;
+}
+$root2 = sqrt($sum);
+echo "square root from squared elemts sum is $root2";
+echo "\n";
+
+$root3 = sqrt(379);
+$root3Num = round($root3);
+$root3Ten = round($root3, 1);
+$root3Thousand = round($root3, 2);
+echo "to numbers $root3Num";
+echo "\n";
+echo "to tens $root3Ten";
+echo "\n";
+echo "to thousands $root3Thousand";
+echo "\n";
+
+$root4 = sqrt(587);
+$root4Top = ceil($root4);
+$root4Bot = floor($root4);
+
+$array2 = ["ceil" => $root4Top, "floor" => $root4Bot];
+var_dump($array2);
+
+$array3 = [4, -2, 5, 19, -130, 0, 10];
+$minim = min($array3);
+echo "min from array3 is $minim";
+echo "\n";
+
+$maxim = max($array3);
+echo "max from array3 is $maxim";
+echo "\n";
+
+$randNum = rand(1, 100);
+echo "random num is $randNum";
+echo "\n";
+
+$array4 = [];
+
+while (sizeof($array4) < 11) array_push($array4, rand(1, 100));
+echo "array of random numbers(1-100) is ";
+foreach ($array4 as $item) {
+    echo "$item ";
+}
+echo "\n";
+
+$a = rand(1, 100);
+$b = rand(1, 100);
+$abs = abs($a - $b);
+echo "a: $a, b: $b module is $abs";
+echo "\n";
+
+$array5 = [1, 2, -1, -2, 3, -3];
+$array6 = [];
+foreach ($array5 as $item) {
+    array_push($array6, abs($item));
+}
+echo "origin array is ";
+foreach ($array5 as $item) {
+    echo "$item ";
+}
+echo "\n";
+echo "array with only positive is ";
+foreach ($array6 as $item) {
+    echo "$item ";
+}
+echo "\n";
+
+$num = rand(1, 100);
+echo "new num is $num";
+echo "\n";
+
+$array7 = [];
+for ($i = 1; $i <= sqrt($num) + 1; ++$i) {
+    if ($num % $i == 0) {
+        array_push($array7, $i);
+    }
+}
+for ($i = sizeof($array7) - 1; $i >= 0; --$i) {
+    $temp = $num / $array7[$i];
+    if (!in_array($temp, $array7)) {
+        array_push($array7, $temp);
+    }
+}
+echo "its divisors is : ";
+foreach ($array7 as $item) {
+    echo "$item ";
+}
+echo "\n";
+
+$array8 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+$cnt = 0;
+$temp_sum = 0;
+foreach ($array8 as $item) {
+    $temp_sum += $item;
+    $cnt++;
+    if ($temp_sum > 10) break;
+}
+echo "we should summarize first $cnt elements to receive sum greater than 10";
+echo "\n";
