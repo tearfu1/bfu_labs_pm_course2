@@ -449,6 +449,34 @@ for ($i = 1; $i <= 20; ++$i) {
 
 //task 20
 echo "\ntask20 \n";
+
+#
 $array14 = [1, 10, 15, 11, 63, 16, 45, 35];
 $mean = array_sum($array14) / sizeof($array14);
 echo "mean of array is $mean" . "\n";
+
+#
+$sumThousand = array_sum(range(1, 100));
+echo "sum 1 to 100 is $sumThousand" . "\n";
+
+#
+$array15 = [16, 144, 400];
+$array16 = array_map('sqrt', $array15);
+
+echo "origin array is: ";
+foreach ($array15 as $value) echo "$value ";
+echo "\n";
+echo "square rooted array is: ";
+foreach ($array16 as $value) echo "$value ";
+echo "\n";
+
+#
+$array17 = array_combine(range('a', 'z'), range(1, 26));
+echo "a-z and 1-26 array: ";
+var_dump($array17);
+
+#
+$str = "1234567890";
+$array18 = str_split($str, 2);
+$sum = array_sum($array18);
+echo "sum by pairs: $sum" . "\n";
